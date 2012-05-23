@@ -307,7 +307,6 @@ class TetrixBoard(QtGui.QFrame):
 
         pixmap = QtGui.QPixmap(x * self.squareWidth(), y * self.squareHeight())
         painter = QtGui.QPainter(pixmap)
-        painter.fillRect(pixmap.rect(), QtGui.QColor(255,255,255))
 
         colorTable = [0x000000, 0xCC6666, 0x66CC66, 0x6666CC,
                       0xCCCC66, 0xCC66CC, 0x66CCCC, 0xDAAA00]
@@ -325,7 +324,6 @@ class TetrixBoard(QtGui.QFrame):
             x + self.squareWidth() - 1, y + self.squareHeight() - 1)
         painter.drawLine(x + self.squareWidth() - 1,
             y + self.squareHeight() - 1, x + self.squareWidth() - 1, y + 1)
-
 
         self.nextPieceLabel.setPixmap(pixmap)
 
